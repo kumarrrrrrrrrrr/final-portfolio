@@ -1,5 +1,7 @@
-import aws from '../assets/aws-polymer.png'
-import justicket from '../assets/justicket.png'
+import justicket from '../assets/ticket.jpg'
+import phone from '../assets/phone.png'
+import chat from '../assets/chat2.jpg'
+import aws from '../assets/git.png'
 
 export const data=[
     {
@@ -21,7 +23,7 @@ export const data=[
     {
         id:3,
         name:"ZoText",
-        image:aws,
+        image:chat,
         Frontend:"https://github.com/kumarrrrrrrrrrr/Chat-app-Frontend.git",
         Backend:"https://github.com/kumarrrrrrrrrrr/Chat-app-Backend.git",
         Live:"https://zotext.netlify.app",
@@ -29,7 +31,7 @@ export const data=[
     {
         id:4,
         name:"E-commerce",
-        image:aws,
+        image:phone,
         Frontend:"https://github.com/kumarrrrrrrrrrr/E-commerce-client.git",
         backend:"https://github.com/kumarrrrrrrrrrr/E-commerce-server.git",
         live:"https://ecommerce-pagee.netlify.app",

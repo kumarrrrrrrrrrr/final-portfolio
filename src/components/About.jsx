@@ -23,7 +23,7 @@ const About = () => {
           quick learner with a self-learning attitude. I love to learn and
           explore new technologies and am Passionate about Problem Solving. Love
           almost all the stacks of Software Engineering. My current stack
-          includes Nodejs, React, NextJs, Redux, Bootstrap, Ant Design,
+          includes Nodejs, React, HTML, CSS, Java Script, Bootstrap, 
           Material UI, MongoDB, Mysql.
         </p>
       </div>
