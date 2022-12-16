@@ -1,49 +1,92 @@
-import React from "react";
+
+import React, { useState } from "react";
+import { send } from "emailjs-com";
 
 const Contact = () => {
+  const [senderName, setSenderName] = useState("");
+  const [senderEmail, setSenderEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendMail = (e) => {
+    e.preventDefault();
+    send(
+      "service_uz1ds9f",
+      "template_9z30v0g",
+      { senderName, senderEmail, message },
+      "hWThTiCTUUlqGwCOB"
+    )
+      .then((response) => {
+        const div = document.getElementById("sent");
+        div.textContent = "Message sent successfully :)";
+        setSenderName("");
+        setSenderEmail("");
+        setMessage("");
+      })
+      .catch((err) => {
+        const div = document.getElementById("error");
+        div.textContent = "OOPS! Unknown error occured. Try again later :(";
+      });
+  };
+
   return (
     <div
-      name="contact"
-      className="w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white"
-    >
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Contact
-          </p>
-          <p className="py-6">Submit the form below to get in touch with me</p>
-        </div>
-        <div className="flex justify-center items-center">
-          <form
-            action="https://getform.io/f/31313319-e886-40c5-af98-21b4317d9014"
-            method="POST"
-            className="flex flex-col w-full md:w-1/2"
+          name="contact"
+          className="w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white"
+        >
+    <div className="text-center mt-24 lg:mt-12 md:pt-20">
+      <h1 className="text-2xl text-gray-500">Let&apos;s connect</h1>
+      <div className="w-80 h-auto md:w-96 lg:w-1/2 md:py-8 my-8 mx-auto rounded-md border border-green-900">
+        <p>
+          <span className="text-green-500" id="sent">
+            &nbsp;
+          </span>
+          <span className="text-red-900" id="error">
+            &nbsp;
+          </span>
+        </p>
+        <form className="flex flex-col justify-center items-center w-3/4 md:w-full md:px-8 lg:px-12 mx-auto my-4">
+          <input
+            type="text"
+            name="sender_name"
+            value={senderName}
+            onChange={(e) => {
+              setSenderName(e.target.value);
+            }}
+            required
+            placeholder="your name"
+            className="form-control block w-full px-3 py-1.5 text-base font-normaltext-emerald-400 bg-inherit bg-clip-padding border-b border-solid border-green-300 transition ease-in-out m-4 focus:text-emerald-400 focus:bg-inhert focus:border-green-600 focus:outline-none"
+          />
+          <input
+            type="email"
+            name="sender_email"
+            value={senderEmail}
+            onChange={(e) => {
+              setSenderEmail(e.target.value);
+            }}
+            required
+            placeholder="your_email@gmail.com"
+            className="form-control block w-full px-3 py-1.5 text-base font-normaltext-emerald-400 bg-inherit bg-clip-padding border-b border-solid border-green-300 transition ease-in-out m-4 focus:text-emerald-400 focus:bg-inhert focus:border-green-600 focus:outline-none"
+          />
+          <textarea
+            name="message"
+            value={message}
+            placeholder="your message"
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            required
+            className="form-control block w-full px-3 py-1.5 text-base font-normaltext-emerald-400 bg-inherit bg-clip-padding border-b border-solid border-green-300 transition ease-in-out m-4 focus:text-emerald-400 focus:bg-inhert focus:border-green-600 focus:outline-none"
+          />
+          <button
+            type="submit"
+            className="m-2 p-2 bg-emerald-600 text-white font-bold leading-normal uppercase rounded shadow-md hover:bg-emerald-700 hover:shadow-lg focus:bg-emerald-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-emerald-800 active:shadow-lg transition duration-150 ease-in-out items-center text-sm"
+            onClick={sendMail}
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-            />
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter your email"
-              className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-            />
-            <textarea
-              name="message"
-              placeholder="Enter your message"
-              rows="10"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-            ></textarea>
-
-            <button className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-              Let's Talk
-            </button>
-          </form>
-        </div>
+            Send message
+          </button>
+        </form>
       </div>
+    </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import HeroImage from "../assets/heroImage.png";
+
+import zeroimage from "../assets/zeroimage.jpg"
 import { Link } from "react-scroll";
 
 const Home = () => {
@@ -15,9 +16,7 @@ const Home = () => {
             I'm a Full Stack Developer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            I have 8 years of experience building and desgining software.
-            Currently, I love to work on web application using technologies like
-            React, Tailwind, Next JS and GraphQL.
+          I design and Code simple yet beautiful websites.
           </p>
           <div>
             <Link
@@ -35,7 +34,7 @@ const Home = () => {
         </div>
         <div>
           <img
-            src={HeroImage}
+            src={zeroimage}
             alt="my profile"
             className="rounded-2xl mx-auto w-2/3 md:w-full"
           />
@@ -44,5 +43,6 @@ const Home = () => {
     </div>
   );
 };
+
 
 export default Home;

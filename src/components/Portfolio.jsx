@@ -1,67 +1,79 @@
 import React from "react";
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import installNode from "../assets/portfolio/installNode.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
+import { data } from "../data/data.js";
 
-const Portfolio = () => {
-  const portfolios = [
-    {
-      id: 1,
-      src: arrayDestruct,
-    },
-    {
-      id: 2,
-      src: reactParallax,
-    },
-    {
-      id: 3,
-      src: navbar,
-    },
-    {
-      id: 4,
-      src: reactSmooth,
-    },
-    {
-      id: 5,
-      src: installNode,
-    },
-    {
-      id: 6,
-      src: reactWeather,
-    },
-  ];
+const Project = () => {
+  // projects file
+  const project = data;
+  //setProject(data);
 
   return (
+    // <div name='work' className='w-full md:h-screen text-gray-300 '>
     <div
-      name="portfolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full md:h-screen text-white"
+      name="Projects"
+      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Portfolio
+          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
+            Projects
           </p>
-          <p className="py-6">Check out some of my work right here</p>
+          <div>
+      <h1 className="text-2xl  credential">Credential</h1>
+      <div>
+        <b>Email:</b>
+        <span>demo@gmail.com</span>
+      </div>
+      <div>
+        <b>Password:</b>
+        <span>Demo@123</span>
+      </div>
+    </div>
         </div>
+        
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
-            <div key={id} className=" shadow-md shadow-gray-600 rounded-lg">
-              <img
-                src={src}
-                alt=""
-                className="rounded-md duration-200 hover:scale-105"
-              />
-              <div className="flex items-center justify-center">
-                <button className=" w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Demo
-                </button>
-                <button className="px-6 py-3 w-1/2 m-4 duration-200 hover:scale-105">
-                  Code
-                </button>
+        {/* container for projects */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {/* Gird Item */}
+          {project.map((item, index) => (
+            <div
+              key={index}
+              style={{ backgroundImage: `url(${item.image})` }}
+              className="shadow-lg shadow-[#040c16] group container rounded-md 
+              flex justify-center text-center items-center mx-auto content-div "
+            >
+              {/* Hover effect for images */}
+              <div className="opacity-0 group-hover:opacity-100 ">
+                <span className="text-2xl font bold text-white tracking-wider ">
+                  {item.name}
+                </span>
+                <div className="pt-8 text-center ">
+                  {/* eslint-disable-next-line */}
+                  <a href={item.Frontend} target="_blank">
+                    <button
+                      className="text-center rounded-lg px-4 py-3 m-2
+                       bg-white text-gray-700 font-bold text-lg"
+                    >
+                      Frontend
+                    </button>
+                  </a>
+                  {/* eslint-disable-next-line */}
+                  <a href={item.Backend} target="_blank">
+                    <button
+                      className="text-center rounded-lg px-4 py-3 m-2
+                       bg-white text-gray-700 font-bold text-lg"
+                    >
+                      Backend
+                    </button>
+                  </a>
+                  <a href={item.Live} target="_blank">
+                    <button
+                      className="text-center rounded-lg px-4 py-3 m-2
+                       bg-white text-gray-700 font-bold text-lg"
+                    >
+                      Live
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
@@ -71,4 +83,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Project;

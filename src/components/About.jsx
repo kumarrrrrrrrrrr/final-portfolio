@@ -13,23 +13,18 @@ const About = () => {
           </p>
         </div>
         <p className="text-xl mt-20">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          qui fugit numquam! Cum vitae temporibus molestiae dicta illum
-          laboriosam similique at mollitia nihil iusto repellat numquam eos illo
-          perspiciatis a unde minima commodi id cupiditate laborum iste, beatae
-          maiores. Voluptatum quisquam dignissimos tempore asperiores sit
-          ratione officiis officia alias vitae.
+          My name is Bharathkumar V. I'm a Mern stack developer.
         </p>
 
         <br />
 
         <p className="text-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          qui fugit numquam! Cum vitae temporibus molestiae dicta illum
-          laboriosam similique at mollitia nihil iusto repellat numquam eos illo
-          perspiciatis a unde minima commodi id cupiditate laborum iste, beatae
-          maiores. Voluptatum quisquam dignissimos tempore asperiores sit
-          ratione officiis officia alias vitae.
+          I am a professional and passionate programmer in my daily life. A
+          quick learner with a self-learning attitude. I love to learn and
+          explore new technologies and am Passionate about Problem Solving. Love
+          almost all the stacks of Software Engineering. My current stack
+          includes Nodejs, React, NextJs, Redux, Bootstrap, Ant Design,
+          Material UI, MongoDB, Mysql.
         </p>
       </div>
     </div>
