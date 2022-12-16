@@ -33,8 +33,8 @@ export const data=[
         name:"E-commerce",
         image:phone,
         Frontend:"https://github.com/kumarrrrrrrrrrr/E-commerce-client.git",
-        backend:"https://github.com/kumarrrrrrrrrrr/E-commerce-server.git",
-        live:"https://ecommerce-pagee.netlify.app",
+        Backend:"https://github.com/kumarrrrrrrrrrr/E-commerce-server.git",
+        Live:"https://ecommerce-pagee.netlify.app",
       
     },
 
