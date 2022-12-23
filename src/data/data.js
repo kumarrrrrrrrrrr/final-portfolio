@@ -1,8 +1,7 @@
 import justicket from '../assets/ticket.jpg'
-import phone from '../assets/phone.png'
 import chat from '../assets/chat2.jpg'
 import aws from '../assets/git.png'
-
+import iphone from '../assets/iphone.png'
 export const data=[
     {
         id:1,
@@ -30,8 +29,8 @@ export const data=[
     },
     {
         id:4,
-        name:"E-commerce",
-        image:phone,
+        name:"I phone shop",
+        image:iphone,
         Frontend:"https://github.com/kumarrrrrrrrrrr/E-commerce-client.git",
         Backend:"https://github.com/kumarrrrrrrrrrr/E-commerce-server.git",
         Live:"https://ecommerce-pagee.netlify.app",
