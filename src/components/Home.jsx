@@ -1,7 +1,6 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
-
-import zeroimage from "../assets/zeroimage.jpg"
+import Myimage from "../assets/Myimage.jpg";
 import { Link } from "react-scroll";
 
 const Home = () => {
@@ -16,16 +15,16 @@ const Home = () => {
             I'm a Full Stack Developer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-          I design and Code simple yet beautiful websites.
+            I design and Code simple yet beautiful websites.
           </p>
           <div>
             <Link
-              to="portfolio"
+              to="Projects"
               smooth
               duration={500}
               className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
             >
-              Portfolio
+              Projects
               <span className="group-hover:rotate-90 duration-300">
                 <HiArrowNarrowRight className="ml-1" />
               </span>
@@ -34,7 +33,7 @@ const Home = () => {
         </div>
         <div>
           <img
-            src={zeroimage}
+            src={Myimage}
             alt="my profile"
             className="rounded-2xl mx-auto w-2/3 md:w-full"
           />
@@ -43,6 +42,5 @@ const Home = () => {
     </div>
   );
 };
-
 
 export default Home;

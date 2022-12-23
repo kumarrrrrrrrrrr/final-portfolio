@@ -20,12 +20,12 @@ const Project = () => {
           <div>
       <h1 className="text-2xl  credential">Credential</h1>
       <div>
-        <b>Email:</b>
-        <span>demo@gmail.com</span>
+        <b>User:</b>
+        <span>Email : user@gmail.com  |  Password : User12</span>
       </div>
       <div>
-        <b>Password:</b>
-        <span>Demo@123</span>
+        <b>Admin:</b>
+        <span>Email : admin@gmail.com  |  Password : Admin12</span>
       </div>
     </div>
         </div>
