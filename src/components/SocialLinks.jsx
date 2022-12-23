@@ -41,7 +41,7 @@ const SocialLinks = () => {
         </>
       ),
       style: "rounded-br-md",
-      href: "https://drive.google.com/file/d/1J8TTieNjkoDoXUnnnDP4bajYyxMj_1YP/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1eUOmaFN-3bLma0Djf_FPT9S9QNMnC_df/view?usp=sharing",
       download: true,
     },
   ];
