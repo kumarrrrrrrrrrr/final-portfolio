@@ -1,7 +1,8 @@
 import justicket from '../assets/ticket.jpg'
 import chat from '../assets/chat2.jpg'
 import aws from '../assets/git.png'
-import iphone from '../assets/iphone.png'
+import iphone2 from '../assets/phone2.png'
+import razor  from "../assets/razor.png"
 export const data=[
     {
         id:1,
@@ -30,12 +31,21 @@ export const data=[
     {
         id:4,
         name:"I phone shop",
-        image:iphone,
+        image:iphone2,
         Frontend:"https://github.com/kumarrrrrrrrrrr/E-commerce-client.git",
         Backend:"https://github.com/kumarrrrrrrrrrr/E-commerce-server.git",
         Live:"https://ecommerce-pagee.netlify.app",
       
     },
+    {
+        id:5,
+        name:"Rayzorpay",
+        image:razor,
+        Frontend:"https://github.com/kumarrrrrrrrrrr/Payment-Gateway.git",
+        Live:"https://pay-ment-gateway.netlify.app",
+      
+    },
+    
 
 
 ]
